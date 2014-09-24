@@ -1,0 +1,70 @@
+<h1>Welcome to Scylla</h1>
+<div class="row row-fluid">
+    <div class="col-md-12">
+        Scylla is a tool designed to help you monitor and track changes to URLs.
+        There are two ways we help you manage change:
+        <div class="row row-fluid">
+            <div class="col-md-6">
+                <h3>Single URL Reports</h3>
+                <p> <i class="icon-th-list"></i>
+                    With Single URL <strong>Report</strong>s, we take a screenshot of a specific URL and allow you to
+                    compare the current state with a known <strong>master</strong> (i.e. what you expect it to look like).<br />
+                    Drag this link:<a id='bookmarkletLink' href="" title="+Scylla">+Scylla</a> to your bookmark bar to create a bookmarklet
+                </p>
+                <script>
+                    $('#bookmarkletLink').attr('href', "javascript:" +
+                       "(function(){" +
+                       "   window.SCYLLA_URL = '" + window.location.protocol + '//' + window.location.host + "';" +
+                       "var bookmarklet_script=document.createElement('SCRIPT'); " +
+                       "bookmarklet_script.type='text/javascript'; " +
+                       "bookmarklet_script.src=window.SCYLLA_URL +'/bookmarklet.js'; " +
+                       "document.getElementsByTagName('head')[0].appendChild(bookmarklet_script); " +
+                    "})();");
+                </script>
+                <p> <i class="icon-sitemap" ></i>
+                    These reports must be collected into a <strong>Batch</strong> of reports, which can be launched by
+                    clicking on the Rocket when viewing the Batch Details. You may also choose to schedule a batch to
+                    run at a specific time. After a batch is run on a schedule, it will email the <strong>watchers</strong> with a short summary of the
+                    results, a great way to be greeted every morning when you come in to work.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h3>AB Comparisons</h3>
+                <p> <i class="icon-exchange"></i>
+                    With <strong>AB Compare</strong>, we take a screenshot of two separate URLs and compare them to each
+                    other. This tends to be a great tool to use while in active development or refactoring.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="row row-fluid">
+    <div class="col-md-12">
+        <h2>Visual Differences</h2>
+        Our Visual Diff tool is available to inspect differences, regardless of which path you choose. The tool has two
+        modes to help you identify and analyze differences:
+        <div class="row row-fluid">
+            <div class="col-md-6">
+                <h3>Swipe</h3>
+                <p>
+                    In this mode, the slider bar will let you swipe between the <strong>Master / Current</strong> or
+                    <strong>Url A / Url B</strong>.  By sliding, you will be able to see a seam where the image changes,
+                    helping you identify exactly what the differences are. You'll be able to count the pixels an element
+                    moved, or see two colors side-by-side.<br/>
+                    <iframe src="http://player.vimeo.com/video/68458715?autoplay=1&amp;loop=1" width="336" height="174" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h3>Diff Overlay</h3>
+                <p>
+                    In this mode, the slider bar will adjust the visibility of a map of changed pixels.  This map shows
+                    each and every pixel that changed in bright red, with the rest of the image muted. By reducing the
+                    transparency, you will be able to see the original image more strongly.<br/>
+                <iframe src="http://player.vimeo.com/video/68458455?autoplay=1&amp;loop=1" width="336" height="174" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>

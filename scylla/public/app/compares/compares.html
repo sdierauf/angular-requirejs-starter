@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <processing show="isProcessing"></processing>
+    <div class="row">
+        <h1 class="col-sm-9">AB Compares</h1>
+        <div class="col-sm-3 text-right">
+            <a class="btn btn-primary btn-lg" ng-click="showNew()"><i class="icon-plus-sign"></i> New</a>
+        </div>
+    </div>
+    <div class="row" ng-repeat="compare in compares">
+        <br>
+        <div class="col-md-5">
+            <a ng-href="#/compares/{{compare.id}}">
+                <p class="link">View compare</p>
+                <div class="col-sm-6">
+                    <img class="img img-thumbnail" ng-src="{{ compare.pageA | pageThumb }}">
+                </div>
+                <div class="col-sm-6">
+                    <img class="img img-thumbnail" ng-src="{{ compare.pageB | pageThumb }}">
+                </div>
+
+            </a>
+        </div>
+        <div class="col-md-7">
+            <h3>Page A:</h3>
+            <a ng-href="#/pages/{{compare.pageA.id}}">{{compare.pageA.name}}</a> <br />
+            <a ng-href="{{compare.pageA.url}}">{{compare.pageA.url}}</a>
+            <h3>Page B:</h3>
+            <a ng-href="#/pages/{{compare.pageB.id}}">{{compare.pageB.name}}</a> <br />
+            <a ng-href="{{compare.pageB.url}}">{{compare.pageB.url}}</a>
+            <h1 class="media-heading"><a ng-href="#/compares/{{compare.id}}">{{compare.name}}</a>
+                <a ng-click="confirmDeleteCompare(compare);" class="clickable btn btn-danger"><i class="icon-trash" title="Delete Compare"></i> Delete this compare</a></h1>
+        </div>
+    </div>
+</div>

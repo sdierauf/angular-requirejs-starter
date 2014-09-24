@@ -1,0 +1,57 @@
+{
+  "name": "scylla",
+  "version": "2.2.0",
+  "description": "Scylla",
+  "dependencies": {
+    "restify": "~2.6.3",
+    "bunyan": "~0.22.1",
+    "q-io": "1.6.6",
+    "node-schedule": "~0.1.13",
+    "q": "1.0.1",
+    "sendgrid": "1.0.2",
+    "email-templates": "0.1.6",
+    "moment": "2.5.1",
+    "supertest": "0.9.0",
+    "sinon": "1.9.0",
+    "glob": "3.2.9",
+    "cli": "0.4.5",
+    "charybdis": "git+https://github.com/simplymeasured/charybdis.git#master",
+    "sqlite3": "2.2.0",
+    "socket.io": "1.0.0-pre",
+    "sequelize": "^1.7.0",
+    "mysql": "^2.1.0",
+    "merge": "^1.1.2",
+    "csv": "^0.3.7",
+    "rabbit.js": "^0.4.1"
+  },
+  "devDependencies": {
+    "bunyan-syslog": "^0.2.2",
+    "chai": "*",
+    "cli-color": "^0.2.3",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "0.9.2",
+    "matchdep": "0.3.0",
+    "mocha": "1.18.0",
+    "repl-promised": "^0.1.0",
+    "sinon": "^1.9.0",
+    "sinon-as-promised": "0.0.3",
+    "sinon-chai": "^2.5.0",
+    "sqlite3": "^2.1.19"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "node test/unitTestRunner.js",
+    "components": "cd ./public && bower install && cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simplymeasured/scylla.git"
+  },
+  "author": "Dusty Jewett",
+  "license": "LICENSE.md",
+  "gitHead": "10fa9b5ef1faae5b4a94ac77df047bc09255d07c",
+  "readmeFilename": "readme.md",
+  "bugs": {
+    "url": "https://github.com/simplymeasured/scylla/issues"
+  }
+}
